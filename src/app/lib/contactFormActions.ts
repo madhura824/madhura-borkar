@@ -1,15 +1,16 @@
 "use server"
 import nodemailer from 'nodemailer';
 import { ContactFormDataType, ContactFormState } from './definitions';
-const dotenv = require('dotenv').config();
+
+
 export const submitContactForm = async (
   prevState: ContactFormState,
   data: FormData
 ): Promise<{ error: boolean; message: string }> => {
 
-    console.log("Here")
-    console.log(process.env.EMAIL_ID);
-    console.log(process.env.EMAIL_PASSWORD);
+    // console.log("Here")
+    // console.log(process.env.EMAIL_ID);
+    // console.log(process.env.EMAIL_PASSWORD);
 
   let emailDetails: ContactFormDataType = {
     name: data.get('name') as string,
@@ -23,16 +24,16 @@ export const submitContactForm = async (
  
   
 
-console.log("email details")
-  Object.entries(emailDetails).map((value)=>{
-    console.log(value[0], value[1])
-  })
+// console.log("email details")
+//   Object.entries(emailDetails).map((value)=>{
+//     console.log(value[0], value[1])
+//   })
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "madhuraborkar.portfolio@gmail.com",
-      pass:"mvrfkyfnvemwiwhy"
+      user: process.env.EMAIL_ID,
+      pass: process.env.EMAIL_PASSWORD
       //  mvrf kyfn vemw iwhy
     }
   });
@@ -51,8 +52,8 @@ console.log("email details")
 // });
 
   const mailOptions = {
-    from: "madhuraborkar.portfolio@gmail.com",
-    to: "madhuraborkar.portfolio@gmail.com",
+    from: process.env.EMAIL_ID,
+    to: process.env.EMAIL_ID,
     subject: emailDetails.subject,
     text: `${emailDetails.message}.\n Name: ${emailDetails.name}.\n Contact number: ${emailDetails.mobileNumber}. \n Email Address: ${emailDetails.email}`,
   };

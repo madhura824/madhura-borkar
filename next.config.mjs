@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
+  
   reactStrictMode: true,
   images: {
     unoptimized: true, // Disable default image optimization
   },
   assetPrefix: isProd ? '/madhura-borkar.github.io/' : '',
   basePath: isProd ? '/madhura-borkar.github.io' : '',
-  output: 'export',
+  // output: 'export',
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -48,6 +49,7 @@ const nextConfig = {
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
+    
 
     return config;
   },

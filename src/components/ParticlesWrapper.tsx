@@ -28,7 +28,7 @@ const ParticlesWrapper = ({children}:Readonly<{
     }, []);
 
     const particlesLoaded = async (container?: Container): Promise<void>=>  {
-        console.log(container);
+        // console.log(container);
     };
 
     return (
@@ -48,7 +48,7 @@ const ParticlesWrapper = ({children}:Readonly<{
                 interactivity: {
                     events: {
                         onClick: {
-                            enable: true,
+                            enable: false,
                             mode: "push",
                         },
                         // onHover: {

@@ -18,21 +18,22 @@ export default function Home() {
   let intersectionCounter = 0;
   useEffect(() => {
 
-    console.log("here")
+    // console.log("here")
+    const footerNode = referenceToTheFooter.current;
     const observer = new IntersectionObserver(
       (entries) => {
 
 
         entries.forEach((entry) => {
 
-          console.log(entry)
+          // console.log(entry)
           const board = referenceToTheFooter.current?.querySelector('.board');  
           board?.classList.add("hidden")
           board?.classList.remove("animate-pop-out")
 
           if (entry.isIntersecting && referenceToTheFooter.current) {
 
-            console.log("footer is visible")
+            // console.log("footer is visible")
                        
             board?.classList.remove("hidden")
             board?.classList.add("animate-pop-out")
@@ -42,13 +43,13 @@ export default function Home() {
       { threshold: 0.5 }
     );
 
-    if (referenceToTheFooter.current) {
-      observer.observe(referenceToTheFooter.current);
+    if (footerNode) {
+      observer.observe(footerNode);
     }
 
     return () => {
-      if (referenceToTheFooter.current) {
-        observer.disconnect(); // Cleanup observer
+      if (footerNode) {
+        observer.disconnect();
       }
     };
 

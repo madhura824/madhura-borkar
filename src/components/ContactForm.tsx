@@ -103,20 +103,20 @@ export default function ContactForm() {
 
     // If any validation fails, return early
     if (!valid) {
-      console.log("-1");
+      // console.log("-1");
       return;
     }
 
     // If all validations pass, proceed with form submission
     const data = new FormData();
     Object.entries(formData).map(([key, value]) => {
-      console.log(key, value); // Make sure the data is logged properly
+      // console.log(key, value); // Make sure the data is logged properly
       data.append(key, value); // Append key-value pair to FormData
     });
 
-    console.log("1");
+    // console.log("1");
     contactFormSubmitAction(data);
-    console.log("Contact Form State", contactFormState);
+    // console.log("Contact Form State", contactFormState);
   }
 
   return (
@@ -246,6 +246,6 @@ export default function ContactForm() {
 
 function Submit() {
   const status = useFormStatus();
-  console.log(status.pending)
+  // console.log(status.pending)
   return <Button disabled={status.pending} type="submit" isLoading={status.pending} className="hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-purple-500" >{status.pending?"Submitting":"Submit"}</Button>
 }

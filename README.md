@@ -1,3 +1,17 @@
+# Portfolio Website
+
+This is a portfolio website showcasing my journey as a fresher software developer.
+
+## About Me
+
+- **Name**: Madhura Borkar  
+- **College**: MIT WPU, Pune
+- **Work**: Member of Technical Staff Intern at Bugsmirror Research Pvt Ltd
+    
+
+Feel free to explore my projects, skills, and experiences as I continue to grow and contribute to the tech industry!
+
+---
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
-  
+  experimental: { appDir: true },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+
   reactStrictMode: true,
   images: {
     unoptimized: true, // Disable default image optimization

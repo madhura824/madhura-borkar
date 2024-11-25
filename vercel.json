@@ -1,11 +1,11 @@
 {
     "version":2,
     "builds": [
-      { "src": "*.tsx", "use": "@vercel/node" }
+      { "app": "*.tsx", "use": "@vercel/node" }
     ],
     "routes": [
         {
-          "src": "/(.*)",
+          "app": "/(.*)",
           "dest": "/"
         }
     ],

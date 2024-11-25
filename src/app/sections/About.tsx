@@ -1,5 +1,5 @@
 import { Dancing_Script, Lobster } from 'next/font/google';
-import { LinedBorder, OrangeCircle, YellowStar1, YellowStar2, YellowStar3 } from '@/assets/icons';
+import { LinedBorder, OrangeCircle, YellowStar1, YellowStar2, YellowStar3 } from '@/app/assets/icons';
 const dancingScript = Lobster({ weight: "400", subsets: ["latin"] })
 import Image from 'next/image';
 import { about_me_description } from '@/app/lib/constants'

@@ -1,6 +1,6 @@
 
 import Image from 'next/image' 
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/app/components/ProjectCard";
 import { projects } from '@/app/lib/constants';
 import { Dancing_Script, Lobster } from "next/font/google";
 const dancingScript = Lobster({ weight: "400", subsets: ["latin"] })

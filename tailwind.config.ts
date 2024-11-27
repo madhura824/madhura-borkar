@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 const {nextui} = require("@nextui-org/react");

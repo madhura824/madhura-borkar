@@ -3,9 +3,7 @@ import { submitContactForm } from "@/app/lib/contactFormActions"
 import { ContactFormDataType } from "@/app/lib/definitions"
 import { Card, CardHeader, Divider, CardBody, CardFooter, Input, Textarea, Button } from "@nextui-org/react"
 import clsx from "clsx"
-import { error } from "console"
-import { base } from "framer-motion/client"
-import Link from "next/link"
+
 
 
 import { useEffect, useState, useActionState } from "react"

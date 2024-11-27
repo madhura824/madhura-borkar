@@ -9,7 +9,7 @@ import * as React from "react";
 import Head from 'next/head';
 
 // 1. import `NextUIProvider` component
-import { NextUIProvider } from "@nextui-org/react";
+import {NextUIProvider} from "@nextui-org/react";
 
 import { Header } from "@/sections/Header";
 import Logo from "@/Components/Logo";

@@ -1,5 +1,5 @@
 import { Dancing_Script, Lobster,Creepster, DM_Sans } from 'next/font/google';
-import { LinedBorder, OrangeCircle, YellowStar1, YellowStar2, YellowStar3 } from '@/app/assets/icons';
+import { LinedBorder, OrangeCircle, YellowStar1, YellowStar2, YellowStar3 } from '@/assets/icons';
 const dancingScript = Lobster({ weight: "400", subsets: ["latin"] })
 const creepster = Creepster({ weight: "400", subsets: ["latin"] })
 const poppins = DM_Sans ({weight:"400", subsets:["latin"]})

@@ -1,4 +1,4 @@
-import ContactForm from "@/app/components/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import { Dancing_Script, Lobster } from 'next/font/google';
 import { Link } from "@nextui-org/link";
 const dancingScript = Lobster({ weight: "400", subsets: ["latin"] })

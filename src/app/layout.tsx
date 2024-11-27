@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Calistoga } from "next/font/google"
 import { twMerge } from "tailwind-merge";
-import { FooterCloud } from "@/app/assets/icons";
+import { FooterCloud } from "@/assets/icons";
 const inter = Inter({ subsets: ['latin'], variable: "--font-sans" })
 const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-serif", weight: ["400"] })
 import * as React from "react";
@@ -11,8 +11,8 @@ import Head from 'next/head';
 // 1. import `NextUIProvider` component
 import { NextUIProvider } from "@nextui-org/react";
 
-import { Header } from "@/app/sections/Header";
-import Logo from "@/app/components/Logo";
+import { Header } from "@/sections/Header";
+import Logo from "@/components/Logo";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 
 const url = process.env.BASE_URL ?? "";

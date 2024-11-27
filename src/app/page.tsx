@@ -1,10 +1,5 @@
 "use client"
 import ParticlesWrapper from "@/app/components/ParticlesWrapper";
-import { Header } from "@/app/sections/Header";
-import { HeroSection } from "@/app/sections/Hero";
-import { FooterCloud } from "@/app/assets/icons"
-
-import { transform } from "next/dist/build/swc";
 import { ProjectsSection } from "@/app/sections/Projects";
 import { ContactSection } from "@/app/sections/Contact";
 import { AboutSection } from "@/app/sections/About";

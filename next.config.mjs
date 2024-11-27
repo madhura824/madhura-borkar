@@ -2,6 +2,7 @@
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   pageExtensions: ['tsx', 'ts','js','jsx'], // Ensures TypeScript works correctly
+  swcMinify: true,
 
   reactStrictMode: true,
   images: {

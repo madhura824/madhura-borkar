@@ -4,9 +4,10 @@ const {nextui} = require("@nextui-org/react");
 const config: Config = {
   content: [
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./src/assets/**/*.{js,ts,jsx,tsx,mdx,svg}",
+    
   ],
   theme: {
     screens: {

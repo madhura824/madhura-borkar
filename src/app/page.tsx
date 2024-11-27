@@ -1,5 +1,5 @@
 "use client"
-import ParticlesWrapper from "@/components/ParticlesWrapper";
+import ParticlesWrapper from "@/Components/ParticlesWrapper";
 import { ProjectsSection } from "@/sections/Projects";
 import { ContactSection } from "@/sections/Contact";
 import { AboutSection } from "@/sections/About";

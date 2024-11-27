@@ -2,12 +2,13 @@
 import { submitContactForm } from "@/app/lib/contactFormActions"
 import { ContactFormDataType } from "@/app/lib/definitions"
 import { Card, CardHeader, Divider, CardBody, CardFooter, Input, Textarea, Button } from "@nextui-org/react"
+import clsx from "clsx"
 import { error } from "console"
 import { base } from "framer-motion/client"
 import Link from "next/link"
 
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useActionState } from "react"
 import React from "react"
 import { useFormState, useFormStatus } from "react-dom"
 
@@ -27,10 +28,14 @@ export default function ContactForm() {
     const mobileRegex = /^\d{10}$/;
     return mobileRegex.test(mobileNumber.toString());
   }
-  const [contactFormState, contactFormSubmitAction] = useFormState(submitContactForm, {
-    error: false,
-    message: "",
-  });
+const initData ={
+  name: "",
+  email: "",
+  mobileNumber: 0,
+  message: "",
+  subject: "",
+}
+  const [result, setResult] = useState<{ error: boolean, message: string }>({ error: false, message: "" })
   const [formData, setFormData] = useState<ContactFormDataType>(
     {
       name: "",
@@ -40,8 +45,7 @@ export default function ContactForm() {
       subject: "",
 
     })
-  
-    const { pending, data, method, action } = useFormStatus();
+  const [submitting, setSubmitting] = useState(false)
   const [nameError, setNameError] = useState("")
   const [emailError, setEmailError] = useState("")
   const [mobileNumberError, setMobileNumberError] = useState("")
@@ -61,22 +65,35 @@ export default function ContactForm() {
   useEffect(() => {
 
 
-    if (contactFormState.message != "") {
-      if (contactFormState.error == true) toast.error(contactFormState.message,{
-        className: " !bg-gray-500 !backdrop-blur-md !bg-opacity-5 !border-small !border-white !border-opacity-10 !text-gray-400",
-        // bodyClassName: "grow-font-size",
-        progressClassName: "!bg-gradient-to-l !from-purple-400 !via-white !to-pink-400",
-      });
-      else toast.success(contactFormState.message,{
-        className: " !bg-gray-500 !backdrop-blur-md !bg-opacity-5 !border-small !border-white !border-opacity-10 !text-gray-400",
-        // bodyClassName: "grow-font-size",
-        progressClassName: "!bg-gradient-to-l !from-purple-400 !via-white !to-pink-400",
-      })
+    if (result.message != "") {
+      if (result.error == true) {
+
+
+        toast.error(result.message, {
+          className: " !bg-gray-500 !backdrop-blur-md !bg-opacity-5 !border-small !border-white !border-opacity-10 !text-gray-400",
+          // bodyClassName: "grow-font-size",
+          progressClassName: "!bg-gradient-to-l !from-purple-400 !via-white !to-pink-400",
+        });
+
+        setSubmitting(false)
+      }
+      else {
+
+        setFormData(initData)
+        toast.success(result.message, {
+          className: " !bg-gray-500 !backdrop-blur-md !bg-opacity-5 !border-small !border-white !border-opacity-10 !text-gray-400",
+          // bodyClassName: "grow-font-size",
+          progressClassName: "!bg-gradient-to-l !from-purple-400 !via-white !to-pink-400",
+        })
+        setSubmitting(false)
+
+      }
     }
-  }, [contactFormState])
+  }, [result])
 
 
-  function handleSubmit() {
+  async function handleSubmit() {
+    setSubmitting(true)
     let valid = true; // Track whether the form is valid or not
 
     // Validate each field
@@ -104,6 +121,8 @@ export default function ContactForm() {
     // If any validation fails, return early
     if (!valid) {
       // console.log("-1");
+
+      setSubmitting(false)
       return;
     }
 
@@ -115,7 +134,9 @@ export default function ContactForm() {
     });
 
     // console.log("1");
-    contactFormSubmitAction(data);
+    const res = await submitContactForm(data);
+
+    setResult(res)
     // console.log("Contact Form State", contactFormState);
   }
 
@@ -129,8 +150,8 @@ export default function ContactForm() {
       </CardHeader>
       <Divider />
       <CardBody>
-        <form className="flex flex-col items-center justify-center gap-3" action={(e) => {
-          // e.preventDefault()
+        <form className="flex flex-col items-center justify-center gap-3" onSubmit={(e) => {
+          e.preventDefault()
           handleSubmit()
         }}>
           <Input
@@ -233,7 +254,11 @@ export default function ContactForm() {
 
             }} />
 
-          <Submit />
+          <Button disabled={submitting} type="submit" isLoading={submitting} className={clsx("hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-purple-500",
+            {
+              "bg-gradient-to-r from-pink-400 to-purple-500" : submitting
+            }
+          ) }>{submitting ? "Submitting" : "Submit"}</Button>
         </form>
       </CardBody>
       <Divider />
@@ -244,8 +269,3 @@ export default function ContactForm() {
   )
 }
 
-function Submit() {
-  const status = useFormStatus();
-  // console.log(status.pending)
-  return <Button disabled={status.pending} type="submit" isLoading={status.pending} className="hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-purple-500" >{status.pending?"Submitting":"Submit"}</Button>
-}

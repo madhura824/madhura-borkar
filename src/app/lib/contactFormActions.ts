@@ -4,13 +4,12 @@ import { ContactFormDataType, ContactFormState } from './definitions';
 
 
 export const submitContactForm = async (
-  prevState: ContactFormState,
   data: FormData
 ): Promise<{ error: boolean; message: string }> => {
 
-    // console.log("Here")
-    // console.log(process.env.EMAIL_ID);
-    // console.log(process.env.EMAIL_PASSWORD);
+    console.log("Here")
+    console.log(process.env.EMAIL_ID);
+    console.log(process.env.EMAIL_PASSWORD);
 
   let emailDetails: ContactFormDataType = {
     name: data.get('name') as string,

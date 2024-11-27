@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
-  experimental: { appDir: true },
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  pageExtensions: ['tsx', 'ts','js','jsx'], // Ensures TypeScript works correctly
 
   reactStrictMode: true,
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/madhura-borkar.github.io/' : '',
-  basePath: isProd ? '/madhura-borkar.github.io' : '',
+  // assetPrefix: isProd ? '/madhura-borkar/' : '',
+  // basePath: isProd ? '/madhura-borkar' : '',
   // output: 'export',
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -55,20 +54,6 @@ const nextConfig = {
 
     return config;
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '@/assets/images/',
-  //       locale: false,
-  //       headers: [
-  //         {
-  //           key: 'Cache-Control',
-  //           value: 'public, max-age=9999999999, must-revalidate',
-  //         }
-  //       ],
-  //     },
-  //   ]
-  // }
 
 };
 

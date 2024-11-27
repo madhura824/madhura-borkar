@@ -1,20 +1,22 @@
-import { Dancing_Script, Lobster } from 'next/font/google';
+import { Dancing_Script, Lobster,Creepster, DM_Sans } from 'next/font/google';
 import { LinedBorder, OrangeCircle, YellowStar1, YellowStar2, YellowStar3 } from '@/app/assets/icons';
 const dancingScript = Lobster({ weight: "400", subsets: ["latin"] })
+const creepster = Creepster({ weight: "400", subsets: ["latin"] })
+const poppins = DM_Sans ({weight:"400", subsets:["latin"]})
 import Image from 'next/image';
-import { about_me_description } from '@/app/lib/constants'
 import localFont from 'next/font/local';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
+
 // Font files can be colocated inside of `app`
-const wotfardRegular = localFont({
-  src: '../../public/wotfard_regular_webfont.woff2',
-  display: 'swap',
-})
-const scaryHalloween = localFont({
-  src: '../../public/Scary_Halloween_Font.ttf',
-  display: 'swap',
-})
+// const wotfardRegular = localFont({
+//   src: '/public/fonts/wotfard_regular_webfont.woff2',
+//   // display: 'swap',
+// });
+
+
+
+
 export const AboutSection = () => {
 
   // const wotfardRegular = localFont({ src: './my-font.woff2' })
@@ -47,7 +49,7 @@ export const AboutSection = () => {
 
         </div>
         <div className='flex flex-1 h-full w-full'>
-          <span className={`${wotfardRegular.className}  text-gray-400 text-justify text-l sm:text-xl md:text-2xl p-5 md:p-10 w-full`}>{
+          <span className={`${poppins.className}  text-gray-400 text-justify text-l sm:text-xl md:text-2xl p-5 md:p-10 w-full`}>{
 
             <>
               {" Hi, it's"} <span className='bg-gradient-to-r from-yellow-200 via-orange-300 to-red-500 text-transparent bg-clip-text'> {"Madhura Borkar"}</span>
@@ -67,7 +69,7 @@ export const AboutSection = () => {
                 <Button
                   href={"https://www.geeksforgeeks.org/user/madhurab12/"}
                   target='_blank'
-                  className={`inline font-semibold m-0 h-fit w-fit text-l sm:text-xl md:text-2xl  text-transparent bg-gradient-to-t from-yellow-300 via-orange-500 to bg-red-600 bg-clip-text text-opacity-70 ${scaryHalloween.className} !px-0`}
+                  className={`inline font-semibold m-0 h-fit w-fit text-l sm:text-xl md:text-3xl  text-transparent bg-gradient-to-t from-yellow-300 via-orange-500 to bg-red-600 bg-clip-text text-opacity-70 ${creepster.className} !px-0`}
 
                   as={Link}
                 >
@@ -75,7 +77,7 @@ export const AboutSection = () => {
                 <Button
                   href={"https://leetcode.com/u/madura2228/"}
                   target='_blank'
-                  className={`inline font-semibold   m-0 h-fit w-fit  text-l sm:text-xl md:text-2xl text-transparent bg-gradient-to-t from-yellow-300 via-orange-500 to bg-red-600 bg-clip-text text-opacity-70 ${scaryHalloween.className} px-0`}
+                  className={`inline font-semibold   m-0 h-fit w-fit  text-l sm:text-xl md:text-3xl text-transparent bg-gradient-to-t from-yellow-300 via-orange-500 to bg-red-600 bg-clip-text text-opacity-70 ${creepster.className} px-0`}
                   as={Link}
                 >
                   {"LeetCode"}
@@ -86,7 +88,7 @@ export const AboutSection = () => {
                 <Button
                   href={"https://www.codechef.com/users/mitw_np_908"}
                   target='_blank'
-                  className={`inline font-semibold m-0 h-fit w-fit  text-l sm:text-xl md:text-2xl text-transparent bg-gradient-to-t from-yellow-300 via-orange-500 to bg-red-600 bg-clip-text text-opacity-70 ${scaryHalloween.className} px-0 `}
+                  className={`inline font-semibold m-0 h-fit w-fit  text-l sm:text-xl md:text-3xl text-transparent bg-gradient-to-t from-yellow-300 via-orange-500 to bg-red-600 bg-clip-text text-opacity-70 ${creepster.className} px-0 `}
                   as={Link}
 
                 >{"CodeChef"}</Button> 

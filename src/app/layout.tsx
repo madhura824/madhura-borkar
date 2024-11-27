@@ -12,7 +12,7 @@ import Head from 'next/head';
 import {NextUIProvider} from "@nextui-org/react";
 
 import { Header } from "@/sections/Header";
-import Logo from "@/Comp/Logo";
+import Logo from "@/Components/Logo";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 
 const url = process.env.BASE_URL ?? "";

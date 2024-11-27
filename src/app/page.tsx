@@ -1,10 +1,10 @@
 "use client"
-import ParticlesWrapper from "@/app/components/ParticlesWrapper";
-import { ProjectsSection } from "@/app/sections/Projects";
-import { ContactSection } from "@/app/sections/Contact";
-import { AboutSection } from "@/app/sections/About";
-import { EndSection } from "@/app/sections/Resume";
-import  PersonalDetails from "@/app/sections/PersonalDetails";
+import ParticlesWrapper from "@/components/ParticlesWrapper";
+import { ProjectsSection } from "@/sections/Projects";
+import { ContactSection } from "@/sections/Contact";
+import { AboutSection } from "@/sections/About";
+import { EndSection } from "@/sections/Resume";
+import  PersonalDetails from "@/sections/PersonalDetails";
 
 import { useEffect, useRef } from "react";
 

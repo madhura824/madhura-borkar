@@ -14,8 +14,8 @@ export const EndSection = ({ referenceToTheFooter }: { referenceToTheFooter: Ref
 
   const downloadResume = () => {
     const link = document.createElement('a'); // Create an anchor element
-    link.href = '/MADHURA_BORKAR_RESUME_SEPTEMBER_2024.pdf'; // Set the file path
-    link.download = 'Madhura-Borkar-Resume.pdf'; // Set the file name for download
+    link.href = '/MADHURA-BORKAR-RESUME-SOFTWARE-DEVELOPMENT-NOVEMBER-2024.pdf'; // Set the file path
+    link.download = 'MADHURA-BORKAR-RESUME-SOFTWARE-DEVELOPMENT-PROFILE'; // Set the file name for download
     document.body.appendChild(link); // Append the link to the document
     link.click(); // Trigger the download
     document.body.removeChild(link); // Clean up by removing the link element

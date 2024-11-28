@@ -2,7 +2,7 @@
   "version": 2,
   "routes": [
     {
-      "src": "/(.*\\.(png|jpg|jpeg|webp|svg|gif|ico|css|js|map|woff|woff2|ttf|otf|eot))$",
+      "src": "/(.*\\.(png|jpg|jpeg|webp|svg|gif|ico|css|js|map|woff|woff2|ttf|otf|eot|pdf))$",
       "dest": "/public/$1"
     },
     {

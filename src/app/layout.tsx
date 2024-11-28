@@ -47,7 +47,7 @@ export default function RootLayout({
           {/* <span>It’s been a couple of years since container queries started landing in browsers… so why isn’t anyone using them? It turns out that container queries are kinda tricky; they’re not as straightforward as media queries. In this tutorial, we’ll break it all down and make sense of them, so that you can start using them in your work.</span> */}
           </div>
         <div className="hidden md:block bg-black/85 blur-3xl w-[100%] h-[20vh] fixed left-0 z-30"></div>
-        <div className="fixed left-0 z-30 bg-gradient-to-b from-black  via-black/50 to-transparent w-[100%] h-[30vh]  md:hidden"></div>
+        <div className="fixed left-0 z-30 bg-gradient-to-b from-black  via-black/50 to-transparent w-[100%] h-[20vh]  md:hidden"></div>
           <div className="hidden md:fixed md:block h-[50%] md:-top-24 lg:h-[50%] -top-12 left-0 z-30 ">
             <FooterCloud fill={"#708090"} width={"100%"} height={"100%"} />
           </div>

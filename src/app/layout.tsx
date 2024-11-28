@@ -38,9 +38,10 @@ export default function RootLayout({
 {/* <Head>
 			<link rel='icon' href='/madhura.jpeg' />
 		</Head> */}
+     <NextUIProvider>
     <html lang="en" >
       <body className={twMerge("bg-gray-900 text-white antialiased font-sans m-0 p-0 w-full h-full", inter.variable, calistoga.variable)}>
-        <NextUIProvider>
+       
         <div className="fixed top-5 left-1/2 transform -translate-x-1/2 z-40 w-[100%] h-fit flex items-center justify-center"> 
           <Header />
           {/* <span>It’s been a couple of years since container queries started landing in browsers… so why isn’t anyone using them? It turns out that container queries are kinda tricky; they’re not as straightforward as media queries. In this tutorial, we’ll break it all down and make sense of them, so that you can start using them in your work.</span> */}
@@ -58,10 +59,11 @@ export default function RootLayout({
          
 
           {children}
-        </NextUIProvider>
+       
 
       </body>
     </html>
+    </NextUIProvider>
     </>
 
   );

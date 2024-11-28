@@ -1,14 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 const {nextui} = require("@nextui-org/react");
 const config: Config = {
   content: [
+    "./src/assets/**/*.{js,ts,jsx,tsx,mdx,svg}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx,css}",
-    "./src/assets/**/*.{js,ts,jsx,tsx,mdx,svg}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 
     
@@ -31,9 +30,7 @@ const config: Config = {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
       },
-      colors: {
-        "cloud-gray": "#708090",
-      },
+    
       keyframes: {
         "space-effect1": {
           "0%": {

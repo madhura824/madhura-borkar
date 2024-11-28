@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   pageExtensions: ['tsx', 'ts','js','jsx'], // Ensures TypeScript works correctly
   swcMinify: true,
@@ -8,8 +7,6 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  // assetPrefix: isProd ? '/madhura-borkar/' : '',
-  // basePath: isProd ? '/madhura-borkar' : '',
   // output: 'export',
   webpack(config) {
     // Grab the existing rule that handles SVG imports

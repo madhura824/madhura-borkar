@@ -3,6 +3,8 @@
 import type { Config } from "tailwindcss";
 const {nextui} = require("@nextui-org/react");
 const config: Config = {
+  important: true,
+
   content: [
     "./src/assets/**/*.{js,ts,jsx,tsx,mdx,svg}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",

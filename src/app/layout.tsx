@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   icons:"/favicon.png",
   authors:["Madhura Borkar" as Author],
   keywords:["Madhura Borkar","Software Developer Portfolio","SDE", "Software Engineer","Portfolio"],
-metadataBase : new URL(url)
+    metadataBase : new URL(url)
 
 };
 

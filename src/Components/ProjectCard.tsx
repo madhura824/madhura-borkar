@@ -11,7 +11,7 @@ export default function ProjectCard( {project}:{project:ProjectDataType}) {
         </div>
       </CardHeader>
       <Divider/>
-      <CardBody>
+      <CardBody className="overflow-y-hidden">
         <p className=" text-gray-300 text-small">{project.Description}</p>
       </CardBody>
       <Divider/>

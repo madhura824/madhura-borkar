@@ -27,7 +27,8 @@ export const submitContactForm = async (
 //   Object.entries(emailDetails).map((value)=>{
 //     console.log(value[0], value[1])
 //   })
-
+// console.log( process.env.EMAIL_ID)
+// console.log( process.env.EMAIL_PASSWORD)
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

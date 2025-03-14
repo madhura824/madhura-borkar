@@ -51,14 +51,7 @@ export const education = [
 
 
 export const projects = [
-    {
-  
-      Title:"Bus Scheduling and Depot Management System",
-      Domain: "DataBase Management System",
-      Description: "Conceptualized, designed, and implemented the database and the backend.",
-      Link: "https://github.com/madhura824/busDepotManagement"
-  
-    },{
+  {
       Title:"Path Finding Algorithms Visualizer",
       Domain: "Web Development, Data Structures and Algorithms",
       Description: "Conceptualized, designed, and implemented the database and the backend.",
@@ -73,7 +66,23 @@ export const projects = [
       Link: "https://github.com/madhura824/huffmanEncoding"
   
     },
+    
+
     {
+      Title: "ERP (Enterprise Resource Planning) for the College Management System",
+      Domain: "Web-Development, Node, Javascript",
+      Description: "Development of the REST API’s using JavaScript and Thunder-Client",
+      Link:"https://github.com/madhura824/erp_backend"
+
+    },
+    {
+  
+      Title:"Bus Scheduling and Depot Management System",
+      Domain: "DataBase Management System",
+      Description: "Conceptualized, designed, and implemented the database and the backend.",
+      Link: "https://github.com/madhura824/busDepotManagement"
+  
+    },{
       Title:"Website for Bugsmirror Research Pvt Ltd",
       Domain: "Web-Development, Next JS, Typescript, React",
       Description: "Creation of website for the company.",

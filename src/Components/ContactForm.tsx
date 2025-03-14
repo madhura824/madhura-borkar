@@ -26,13 +26,13 @@ export default function ContactForm() {
     const mobileRegex = /^\d{10}$/;
     return mobileRegex.test(mobileNumber.toString());
   }
-const initData ={
-  name: "",
-  email: "",
-  mobileNumber: 0,
-  message: "",
-  subject: "",
-}
+  const initData = {
+    name: "",
+    email: "",
+    mobileNumber: 0,
+    message: "",
+    subject: "",
+  }
   const [result, setResult] = useState<{ error: boolean, message: string }>({ error: false, message: "" })
   const [formData, setFormData] = useState<ContactFormDataType>(
     {
@@ -234,7 +234,8 @@ const initData ={
 
             }} />
 
-          <Textarea
+          <Input
+           type="text"
             isInvalid={messageError !== "" ? true : false}
             variant="bordered"
             label="Message"
@@ -242,7 +243,8 @@ const initData ={
             classNames={customStyles}
             isRequired
             errorMessage={messageError}
-            className="max-w-xs "
+            className="max-w-xs"
+
             onValueChange={(value) => {
               setMessageError("")
               setFormData((prev) => ({
@@ -254,9 +256,9 @@ const initData ={
 
           <Button disabled={submitting} type="submit" isLoading={submitting} className={clsx("hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-purple-500",
             {
-              "bg-gradient-to-r from-pink-400 to-purple-500" : submitting
+              "bg-gradient-to-r from-pink-400 to-purple-500": submitting
             }
-          ) }>{submitting ? "Submitting" : "Submit"}</Button>
+          )}>{submitting ? "Submitting" : "Submit"}</Button>
         </form>
       </CardBody>
       <Divider />

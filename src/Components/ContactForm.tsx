@@ -43,6 +43,7 @@ export default function ContactForm() {
       subject: "",
 
     })
+
   const [submitting, setSubmitting] = useState(false)
   const [nameError, setNameError] = useState("")
   const [emailError, setEmailError] = useState("")
@@ -59,7 +60,9 @@ export default function ContactForm() {
     ],
 
   }
-
+useEffect(()=>{
+  console.log(formData)
+},[formData])
   useEffect(() => {
 
 
@@ -77,13 +80,17 @@ export default function ContactForm() {
       }
       else {
 
-        setFormData(initData)
+     
+        console.log("here")
         toast.success(result.message, {
           className: " !bg-gray-500 !backdrop-blur-md !bg-opacity-5 !border-small !border-white !border-opacity-10 !text-gray-400",
           // bodyClassName: "grow-font-size",
           progressClassName: "!bg-gradient-to-l !from-purple-400 !via-white !to-pink-400",
         })
+        
+
         setSubmitting(false)
+    
 
       }
     }
@@ -133,8 +140,17 @@ export default function ContactForm() {
 
     // console.log("1");
     const res = await submitContactForm(data);
-
+if(!res.error){
+  setFormData({
+        name: "",
+        email: "",
+        mobileNumber: 0,
+        message: "",
+        subject: "",
+      });
+}
     setResult(res)
+     
     // console.log("Contact Form State", contactFormState);
   }
 
@@ -169,7 +185,8 @@ export default function ContactForm() {
                 name: value
               }))
             }}
-            classNames={customStyles} />
+            classNames={customStyles} 
+            value={formData.name}/>
 
           <Input
 
@@ -190,7 +207,8 @@ export default function ContactForm() {
                 email: value
               }))
 
-            }} />
+            }}
+            value={formData.email} />
 
           <Input
 
@@ -210,7 +228,8 @@ export default function ContactForm() {
                 ...prev,
                 mobileNumber: !isNaN(parseInt(value)) ? parseInt(value) : 0
               }))
-            }} />
+            }} 
+            value={formData.mobileNumber.toString()}/>
 
 
           <Input
@@ -232,7 +251,8 @@ export default function ContactForm() {
                 subject: value
               }))
 
-            }} />
+            }} 
+            value={formData.subject}/>
 
           <Input
            type="text"
@@ -252,7 +272,8 @@ export default function ContactForm() {
                 message: value
               }))
 
-            }} />
+            }}
+            value={formData.message} />
 
           <Button disabled={submitting} type="submit" isLoading={submitting} className={clsx("hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-purple-500",
             {

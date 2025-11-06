@@ -1,3 +1,4 @@
+"use client"
 export const Header = () => {
 return(
   <div className="flex justify-center items-center z-30 max-w-[100%] w-fit m-5">

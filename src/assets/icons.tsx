@@ -1,6 +1,6 @@
 //icon/svg  Components
 
-
+"use client"
 interface IconProps {
   fill?: string;
   size?: number;

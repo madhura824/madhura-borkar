@@ -1,3 +1,4 @@
+"use client"
 import { education, workExperience } from "@/app/lib/constants";
 import Image from "next/image";
 import { Dancing_Script, Lobster } from "next/font/google";

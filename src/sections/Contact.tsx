@@ -1,3 +1,4 @@
+"use client"
 import ContactForm from "@/Components/ContactForm";
 import { Dancing_Script, Lobster } from 'next/font/google';
 import { Link } from "@nextui-org/link";

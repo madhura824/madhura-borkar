@@ -1,3 +1,4 @@
+"use client"
 import { Kalam, Satisfy } from 'next/font/google'
 const kalam = Satisfy({
   weight: ["400"],

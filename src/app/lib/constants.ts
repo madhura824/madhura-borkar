@@ -30,7 +30,7 @@ export const education = [
         },
         major: "Computer Science And Engineering",
         degree: "Bachelors of Technology",
-        marks: "9.3 / 10",
+        marks: "9.4 / 10",
         college: "MIT-WPU, Pune, Maharashtra"
 
     },
@@ -52,9 +52,37 @@ export const education = [
 
 export const projects = [
   {
+      Title:"Website for Bugsmirror Research Pvt Ltd",
+      Domain: "Web-Development, Next JS, Typescript, React",
+      Description: "Developed the company's official website.\n\n- Collaborated on developing the official company website using Next.js, React, TypeScript, and Tailwind CSS. \n- Implemented reusable UI components, optimized performance, and ensured responsive design across all devices.\n- Worked in an Agile environment, using Git for version control and contributing to sprint deliverables.",
+      Link: "https://bugsmirror.com/"
+    },
+    {
+        Title:"Admin Portal for Bugsmirror Research Pvt Ltd",
+        Domain: "Web-Development, Next JS, Typescript, React",
+        Description: "Development of an internal portal for administrative use, designed to manage various company operations and processes.",
+        Link:""
+    },
+  {
+    Title:"BusRoute Planner: Journey Finder using GTFS Data",
+    Domain: "CPP, Data Structures and Algorithms",
+    Description: "Developed a C++ Application for Optimal Bus Route Analysis: \n\n - It processes GTFS (General Transit Feed Specification) transit data\n - It finds all possible routes between two stops as:-  direct routes, one-transfer routes, and two-transfer route journeys, \n - Enhances travel planning efficiency through intelligent data analysis.",
+    Link: "https://github.com/madhura824/Question-2/"
+
+
+  },
+  {
+    Title:"Smart Document Analyzer ",
+    Domain: "Web Development",
+    Description: "This system allows users to upload and store documents daily, with a credit limit for each. \n\n - It also had the \"Check Document similarity feature\" \n - The content similarity feature compares documents using the Gemini API, identifying similar content from the database. \n - The Admin Dashboard is for approving credits and viewing user analytics, \n - Automated Credit Reset at midnight, and Export Reports for downloading scan history. \n - The system supports multiple users on a local server, enhancing accessibility and scalability.",
+    Link: "https://github.com/madhura824/DocumentScannerAndMatcher"
+
+
+  },
+  {
       Title:"Path Finding Algorithms Visualizer",
       Domain: "Web Development, Data Structures and Algorithms",
-      Description: "Conceptualized, designed, and implemented the database and the backend.",
+      Description: "Developed an Interactive Path-Finding-Algorithm Visualizer:\n\n - Showcases workings of algorithms such as A*, Dijkstra’s, BFS, and DFS\n - Provides interactive visualizations to demonstrate the inner workings of each algorithm \n - Offers an engaging and educational experience for learners and developers\n - Built using React.js, Javascript and Tailwind CSS for a responsive and visually appealing interface",
       Link: "https://github.com/madhura824/pathFindingVisualizer/"
   
   
@@ -62,7 +90,7 @@ export const projects = [
     {
       Title:"File Compressor using Huffman Encoding",
       Domain: "Python, Data Structures and Algorithms",
-      Description: "Creation of a file compressor using Huffman Encoding Technique.",
+      Description: "Developed a File Compressor using Huffman Encoding: \n\n - Implements lossless compression and decompression (extraction)\n - Significantly reduces file size, improving storage efficiency\n - Developed using Python, leveraging data structures and algorithms for optimal performance",
       Link: "https://github.com/madhura824/huffmanEncoding"
   
     },
@@ -71,7 +99,7 @@ export const projects = [
     {
       Title: "ERP (Enterprise Resource Planning) for the College Management System",
       Domain: "Web-Development, Node, Javascript",
-      Description: "Development of the REST API’s using JavaScript and Thunder-Client",
+      Description: "Created REST APIs and developed the backend for an ERP system to streamline administrative tasks in educational institutions primarily using Node JS, JavaScript and Thunder Client.",
       Link:"https://github.com/madhura824/erp_backend"
 
     },
@@ -79,20 +107,10 @@ export const projects = [
   
       Title:"Bus Scheduling and Depot Management System",
       Domain: "DataBase Management System",
-      Description: "Conceptualized, designed, and implemented the database and the backend.",
+      Description: "Developed an effective Bus Depot Management System using core programming concepts and database management system to :\n \n - Optimize depot operations, scheduling, staffing, ticketing \n - Enhance operational efficiency and reduce manual effort.",
       Link: "https://github.com/madhura824/busDepotManagement"
   
-    },{
-      Title:"Website for Bugsmirror Research Pvt Ltd",
-      Domain: "Web-Development, Next JS, Typescript, React",
-      Description: "Creation of website for the company.",
-      Link: "https://bugsmirror.com/"
     },
-    {
-        Title:"Admin Portal for Bugsmirror Research Pvt Ltd",
-        Domain: "Web-Development, Next JS, Typescript, React",
-        Description: "Creation of an internally used portal for/mamnaged by the admin for various company purposes",
-        Link:""
-    }
   ]
+  export const resumeURL = "https://drive.google.com/drive/folders/1ZrH0FKY3oCBOWvoPr09rTSDde8-uR2XA?usp=sharing"
   
